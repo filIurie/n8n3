@@ -18,4 +18,8 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
+USER root
+RUN apk update && apk add --no-cache ffmpeg
+USER node
+
 CMD ["n8n start"]
