@@ -18,8 +18,4 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-USER root
-RUN apt-get update && apt-get install -y ffmpeg
-USER node
-
 CMD ["n8n start"]
